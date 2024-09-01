@@ -3,6 +3,7 @@
 ## Project Overview
 
 This project is a fully responsive solar energy website designed to inform users about the benefits of solar energy and showcase the company’s services. The website provides detailed information about solar energy benefits, showcases past projects, and outlines the advantages of installing solar panels. It also includes a contact form for users to reach out for inquiries or services.
+
 demo at: https://gosolarr.netlify.app/
 
 ## Features
