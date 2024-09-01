@@ -1,0 +1,478 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.home{
+    background: url('../img/home.webP') no-repeat center;
+    width: 100%;
+    background-size: cover;
+    object-fit: cover;
+    color: white;
+    height: 400px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    line-height: 3;
+}
+.home::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.5);
+    z-index:1;
+}
+.home h1{
+    line-height: 1.5;
+}
+.home p{
+    line-height: 1.3;
+}
+.content{
+    margin:10px;
+    position: relative;
+    z-index: 2;
+}
+.button{
+    text-decoration: none;
+    color: white;
+    border: 1px solid white;
+    border-radius: 20px;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+.button:hover{
+    background-color: white;
+    color: rgb(28, 28, 54);
+}
+.feature-container{
+    display: flex;
+    position: relative;
+    margin: 0 auto;
+    margin-top: -60px;
+    z-index: 2;
+    background-color: white;
+    width: 100%;
+    max-width: 650px;
+    text-align: center;
+}
+.feature-container .feature{
+    padding: 10px 10px;
+    overflow: hidden;
+    width: 33.33%;
+}
+.feature-container .feature img{
+    width: 100%;
+    height: 80%;
+    object-fit: cover;
+
+}
+.feature-container .feature img:hover{
+    transform: scale(0.9);
+    transition: 0.5s all ease-in;
+}
+
+.feature-container .feature p{
+    margin-top: 5px;
+    font-size: 15px;
+    color: #333;
+}
+
+.solar-benefits{
+    background: url('../img/benefits.jpg') no-repeat center;
+    width: 100%;
+    background-size: cover;
+    object-fit: cover;
+    color: white;
+    height: 400px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+.solar-benefits::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.5);
+    z-index:1;
+}
+.benefits-container{
+    display: flex;
+    z-index: 1;
+    gap: 20px;
+    margin: 0 10px 30px 10px;
+    width: 100%;
+    max-width: 1000px;
+}
+.benefit{
+    background-color: white;
+    color: black;
+    padding: 25px 25px 60px;
+    width: 33.33%;
+    text-align: left;
+    line-height: 1;
+}
+.solar-benefits .benefit p::first-letter {
+    color: rgb(228, 161, 15);
+    font-size: 25px;
+}
+.benefit .content--underlined{
+    position: relative;
+    text-decoration: none;
+}
+.content--underlined::after{
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background-color: black;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.8s ease;
+}
+.content--underlined:hover::after{
+    transform: scaleX(1);
+}
+.heading{
+    z-index: 1;
+    font-size: 30px;
+    text-align: center;
+    margin: 10px;
+}
+.our-projects img:hover{
+    transform: scale(1.5);
+    transition: 0.5s all ease-in;
+}
+.our-projects .g-col-4{
+    overflow: hidden;
+}
+.grid{
+    width: 100%;
+    max-width: 900px;
+    margin: 0 auto;
+    gap: 20px !important;
+   
+}
+.bd-example-cssgrid [class*="grid"] > div{
+    padding: 0;
+    border: none;
+    background-color: transparent;
+}
+.grid img{
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+.installing .grid{
+    width: 100%;
+    max-width: 950px;
+}
+.installing .g-col-4{
+    width: 100%;
+    background-size: cover;
+    object-fit: cover;
+    color: white;
+    padding: 20px;
+    position: relative;
+    overflow: hidden;
+    min-height: 350px;
+}
+.installing .text{
+    text-align: left;
+    border-top: 2px solid white;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    padding:10px;
+    transform: translateY(100%);
+    transition: transform 0.5s ease-in-out;
+    opacity: 0;
+}
+.text h3{
+    font-size: 18px;
+    position: relative;
+    z-index:3;
+}
+.text p{
+    position: relative;
+    z-index: 3;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+}
+/* .text p:hover {
+  -webkit-line-clamp: unset;
+  overflow: visible;
+  height: auto;
+} */
+.installing .g-col-4:hover .text{
+    transform: translateY(0);
+    opacity: 1;
+}
+/* .installing h3{
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 80%;
+    text-align: left;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-bottom: 10px;
+    border-top: 1px solid white;
+    padding-top: 5px;
+    position: relative;
+    z-index: 1;
+}
+.installing p{
+    text-align: left;
+    margin:0 20px 30px 20px;
+    position: relative;
+    z-index:1;
+}
+.installing h3, .installing p {
+    transform: translateY(100%);
+    transition: transform 0.5s ease-in-out;
+    opacity: 0;
+} */
+  
+/* .installing .g-col-4:hover h3, .installing .g-col-4:hover p {
+    transform: translateY(0);
+    opacity: 1;
+} */
+.installing__content{
+    width: 100%;
+    max-width: 850px;
+    margin: 0 auto;
+    justify-content: center;
+    text-align: center;
+}
+.installing .heading{
+    margin-bottom: 5px;
+}
+.installing .sub-heading{
+    margin-bottom: 30px;
+}
+
+
+.benefit1{
+    background: url('../img/our1.jpg') no-repeat center;
+}
+.benefit2{
+    background: url('../img/our2.jpeg') no-repeat center;
+}
+.benefit3{
+    background: url('../img/our3.jpg') no-repeat center;
+}
+.benefit4{
+    background: url('../img/our4.webp') no-repeat center;
+}
+.benefit5{
+    background: url('../img/our5.png') no-repeat center;
+}
+.benefit6{
+    background: url('../img/our6.webp') no-repeat center;
+}
+.overlay{
+    position: relative;
+}
+.overlay::before{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.5);
+    z-index: 0;
+}
+.contact-us{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 0;
+}
+.container{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    max-width: 1200px;
+}
+.left{
+    flex:1;
+    min-width: 300px;
+    background-size: cover;
+}
+.left img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.right{
+    flex: 1;
+    min-width: 300px;
+    padding: 40px;
+}
+.right label{
+    margin-bottom: 5px;
+    font-weight: bold;
+    color:#555;
+}
+.right input, .right textarea{
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: none;
+    border-bottom: 2px solid gray;
+}
+.right textarea{
+    resize: vertical;
+    height: 100px;
+}
+.terms{
+    display: flex;
+}
+#terms{
+    width: 12px;
+    margin-right: 10px;
+}
+.conditions{
+    text-decoration: none;
+    color: rgb(124, 112, 0);
+}
+.right input:focus, 
+.right textarea:focus {
+  outline: none;
+  border-bottom: 2px solid gray;
+  box-shadow: none;
+}
+.right button{
+    background-color: rgb(124, 112, 0);
+    border: 1px solid transparent;
+    border-radius: 20px;
+    padding: 10px 20px;
+    width: 100%;
+    color: white;
+    font-weight: bold;
+}
+.right button:hover{
+    background-color: rgb(255, 255, 255);
+    border: 1px solid rgb(124, 112, 0);
+    color: rgb(124, 112, 0);
+}
+
+@media screen and (max-width: 992px){
+    .navbar{
+        margin: 0 auto;
+        display: flex;
+    }
+    .feature-container{
+
+        width: 100%;
+
+    }
+    .feature-container .feature p{
+        font-size: 20px;
+        font-weight: bold;
+    }
+    /* .benefit{
+        padding: 30px;
+    } */
+    /* .our-projects .grid{
+        width: 80%;
+    } */
+    .installing .grid{
+        max-width: 850px;
+    }
+    .installing__content{
+        max-width: 750px;
+    }
+    .contact-us .container{
+        width: 100%;
+        max-width:800px;
+    }
+}
+@media screen and (max-width:768px){
+    .feature-container{
+        flex-direction: column;
+        max-width: none;
+     }
+     .feature-container .feature{
+        width: 70%;
+        margin: 0 auto;
+     }
+    .installing h3{
+        font-size: 14px;
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+    .installing .grid{
+        display: flex;
+        flex-direction: column;
+        max-width: 700px;
+    }
+    .installing p{
+        font-size: 12px;
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+    .solar-benefits{
+        height: auto;
+    }
+    .benefits-container{
+        flex-wrap: wrap;
+    }
+    .benefit{
+        margin: 10px auto;
+    }
+    .heading{
+        margin-bottom: 15px;
+    }
+    .our-projects .grid{
+        display: flex;
+        flex-direction: column;
+        max-width: 700px;
+    }
+    .our-projects img{
+        height: 300px;
+    }
+    .right{
+        padding: 0px;
+        margin-left: 20px;
+    }
+}
+@media screen and (max-width:600px){
+    .installing__content{
+        width: 100%;
+    }
+    /* .our-projects .grid{
+        width: 100%;
+    } */
+    .solar-benefits .heading{
+        margin-top: 30px;
+    }
+    .right{
+        margin-left: 0;
+    }
+    .benefit{
+        width: 50%;
+    }
+}
